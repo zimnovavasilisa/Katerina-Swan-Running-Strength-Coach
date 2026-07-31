@@ -602,6 +602,12 @@ footer .wrap{ border-top:1px solid var(--color-border-dark); padding-top:clamp(3
 .modal-card p b{ color:var(--color-text); font-weight:600; }
 .modal-actions{ display:grid; gap:12px; }
 .modal-actions .btn{ width:100%; }
+.modal-dismiss{
+  background:none; border:none; cursor:pointer; padding:8px;
+  font-size:var(--fs-small); font-weight:500; color:var(--color-text-secondary);
+  justify-self:center; transition:color var(--transition);
+}
+.modal-dismiss:hover{ color:var(--color-text); text-decoration:underline; }
 .modal-close{
   position:absolute; top:16px; right:16px; width:38px; height:38px;
   border:none; background:none; cursor:pointer; border-radius:50%;
@@ -644,7 +650,7 @@ body.modal-lock{ overflow:hidden; }
     </nav>
     <div class="nav-side">
       <a class="icon-link" href="https://instagram.com/katrin_swan" target="_blank" rel="noopener" aria-label="Instagram @katrin_swan">IG</a>
-      <a class="icon-link" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+      <a class="icon-link" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener" aria-label="Телеграм-канал Катерины Лебедевой">TG</a>
       <a class="btn btn-primary" href="#start">Записаться</a>
     </div>
     <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><i></i><i></i><i></i></button>
@@ -670,7 +676,7 @@ body.modal-lock{ overflow:hidden; }
       <p class="for-whom">Для тех, кто хочет начать бегать без боли в коленях, пробежать первую дистанцию, вернуть форму после перерыва или беременности — и наконец понять, что и зачем вы делаете на тренировке.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#start">Записаться на консультацию</a>
-        <a class="btn btn-outline" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Написать в Telegram</a>
+        <a class="btn btn-outline" href="https://t.me/katrin_swan" target="_blank" rel="noopener">Написать в Telegram</a>
       </div>
       <div class="hero-badges">
         <span class="badge"><span><b>Артист балета</b> — Мариинский, Большой, Михайловский</span></span>
@@ -998,7 +1004,8 @@ body.modal-lock{ overflow:hidden; }
         <div>Скажу, если цель нереалистична в ваш срок</div>
       </div>
       <div class="final-social">
-        <a class="btn btn-ghost-light" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn btn-ghost-light" href="https://t.me/katrin_swan" target="_blank" rel="noopener">Написать в Telegram</a>
+        <a class="btn btn-ghost-light" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Подписаться на канал</a>
         <a class="btn btn-ghost-light" href="https://instagram.com/katrin_swan" target="_blank" rel="noopener">Instagram @katrin_swan</a>
       </div>
     </div>
@@ -1076,7 +1083,8 @@ body.modal-lock{ overflow:hidden; }
         <p>Тренер по общей и специальной физической подготовке, функциональному тренингу и бегу. Москва и онлайн, персонально 1:1.</p>
       </div>
       <div class="foot-social">
-        <a href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Telegram →</a>
+        <a href="https://t.me/katrin_swan" target="_blank" rel="noopener">Написать в Telegram →</a>
+        <a href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Телеграм-канал →</a>
         <a href="https://instagram.com/katrin_swan" target="_blank" rel="noopener">Instagram →</a>
       </div>
     </div>
@@ -1094,17 +1102,18 @@ body.modal-lock{ overflow:hidden; }
     <button class="modal-close" id="sentClose" type="button" aria-label="Закрыть">×</button>
     <div class="modal-mark" aria-hidden="true">✓</div>
     <h3 id="sentTitle">Заявка отправлена</h3>
-    <p>Спасибо, <b id="sentName">я получила вашу заявку</b>. Отвечу лично в течение 24 часов — задам пару уточняющих вопросов и предложу формат.<br><br>Если хочется начать разговор раньше, напишите мне в Telegram.</p>
+    <p>Спасибо, <b id="sentName">я получила вашу заявку</b>. Отвечу лично в течение 24 часов — задам пару уточняющих вопросов и предложу формат.<br><br>Если хочется начать разговор раньше — напишите мне в Telegram. А в канале я разбираю технику, нагрузку и восстановление.</p>
     <div class="modal-actions">
-      <a class="btn btn-primary" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Написать в Telegram</a>
-      <button class="btn btn-outline" type="button" data-close>Закрыть</button>
+      <a class="btn btn-primary" href="https://t.me/katrin_swan" target="_blank" rel="noopener">Написать в Telegram</a>
+      <a class="btn btn-outline" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Подписаться на канал</a>
+      <button class="modal-dismiss" type="button" data-close>Закрыть</button>
     </div>
   </div>
 </div>
 
 <!-- мобильная липкая панель -->
 <div class="sticky-cta">
-  <a class="btn btn-ghost-light" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Telegram</a>
+  <a class="btn btn-ghost-light" href="https://t.me/katrin_swan" target="_blank" rel="noopener">Написать</a>
   <a class="btn btn-primary" href="#start">Записаться на консультацию</a>
 </div>
 
@@ -1247,7 +1256,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
     } catch (err) {
       btn.disabled = false;
       btn.textContent = 'Отправить заявку';
-      say('Не получилось отправить. Проверьте интернет или напишите мне в Telegram.', 'err');
+      say('Не получилось отправить. Проверьте соединение или напишите мне в Telegram.', 'err');
     }
   });
 })();
