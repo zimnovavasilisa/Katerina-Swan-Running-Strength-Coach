@@ -32,7 +32,9 @@
   --color-text-light:      #F8F6FB;
   --color-text-muted:      #A79BB4;
   --color-border:          #DDD5E5;
-  --color-border-dark:     rgba(255,255,255,.12);
+  --color-border-dark:     rgba(255,255,255,.12);   /* декоративные линии */
+  --border-on-dark:        rgba(255,255,255,.5);    /* границы кнопок: 5.27:1 */
+  --fill-on-dark:          rgba(255,255,255,.1);
   --color-accent:          #7560A7;
   --color-accent-hover:    #654D99;
   --color-accent-ink:      #654D99;   /* текст на accent-soft: AA 5.6:1 */
@@ -165,9 +167,9 @@ section{ padding:var(--section-space) 0; }
 .btn-outline{ background:transparent; border-color:var(--color-accent); color:var(--color-accent); }
 .btn-outline:hover{ background:var(--color-accent); color:#fff; transform:translateY(-1px); }
 .btn-outline:active{ transform:translateY(0); opacity:.95; }
-.btn-ghost-light{ background:transparent; border-color:rgba(255,255,255,.25); color:var(--color-text-light); }
-.btn-ghost-light:hover{ background:rgba(255,255,255,.08); }
-.btn-ghost-light:active{ background:rgba(255,255,255,.14); }
+.btn-ghost-light{ background:var(--fill-on-dark); border-color:var(--border-on-dark); color:#fff; }
+.btn-ghost-light:hover{ background:#fff; color:var(--color-text); border-color:#fff; transform:translateY(-1px); }
+.btn-ghost-light:active{ transform:translateY(0); opacity:.95; }
 .btn:disabled{ opacity:.55; cursor:not-allowed; transform:none; box-shadow:none; }
 
 /* ---------- фото ---------- */
@@ -322,7 +324,7 @@ header{
   font-size:var(--fs-small); line-height:var(--lh-small);
   display:flex; gap:14px; align-items:flex-start;
 }
-.cred-list li:last-child{ border-bottom:none; padding-bottom:0; }
+.cred-card > .cred-list:last-of-type > li:last-child{ border-bottom:none; padding-bottom:0; }
 .cred-list li::before{ content:""; width:4px; height:4px; border-radius:50%; background:var(--color-accent-faint); margin-top:9px; flex:none; }
 .cred-list span{ color:var(--color-text-secondary); }
 .cred-list b{ font-weight:600; color:var(--color-text); }
@@ -353,6 +355,7 @@ header{
   font-size:var(--fs-over); text-transform:uppercase; letter-spacing:var(--tracking-overline);
   font-weight:600; color:var(--color-accent-ink); background:var(--color-accent-soft);
   padding:6px 13px; border-radius:var(--radius-pill);
+  white-space:nowrap; line-height:1.4;
 }
 .svc h3{ font-size:22px; }
 .svc > p{ font-size:var(--fs-small); line-height:var(--lh-small); color:var(--color-text-secondary); }
@@ -362,6 +365,17 @@ header{
   color:var(--color-text-muted); font-weight:600; margin-bottom:5px;
 }
 .svc dd{ font-size:var(--fs-small); line-height:var(--lh-small); }
+/* карточки услуг: общие дорожки строки — тег, заголовок, описание и нижний блок
+   выравниваются между соседними карточками */
+@supports (grid-template-rows: subgrid){
+  .svc{
+    display:grid; grid-row:span 4; grid-template-rows:subgrid;
+    grid-template-columns:100%; row-gap:14px;
+  }
+  .svc .tag{ justify-self:start; }
+  .svc dl{ margin-top:0; align-self:start; }
+}
+
 @media (max-width:1040px){ .svc-grid{ grid-template-columns:1fr 1fr; } }
 @media (max-width:680px){ .svc-grid{ grid-template-columns:1fr; } }
 
@@ -532,11 +546,12 @@ footer .wrap{ border-top:1px solid var(--color-border-dark); padding-top:clamp(3
 .foot-social{ display:flex; gap:12px; flex-wrap:wrap; }
 .foot-social a{
   display:inline-flex; align-items:center; gap:9px;
-  border:1px solid var(--color-border-dark); border-radius:var(--radius-pill);
-  padding:13px 24px; font-size:var(--fs-small); font-weight:600;
-  transition:background var(--transition), border-color var(--transition);
+  border:1px solid var(--border-on-dark); background:var(--fill-on-dark);
+  border-radius:var(--radius-pill);
+  padding:13px 24px; font-size:var(--fs-small); font-weight:600; color:#fff;
+  transition:background var(--transition), border-color var(--transition), color var(--transition);
 }
-.foot-social a:hover{ background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.22); }
+.foot-social a:hover{ background:#fff; color:var(--color-text); border-color:#fff; }
 .foot-bottom{
   margin-top:44px; padding-top:24px; border-top:1px solid var(--color-border-dark);
   display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
@@ -655,7 +670,7 @@ body.modal-lock{ overflow:hidden; }
       </div>
       <div class="hero-badges">
         <span class="badge"><span><b>Артист балета</b> — Мариинский, Большой, Михайловский</span></span>
-        <span class="badge"><span><b>Атлет</b> бегового бренда Running Religion</span></span>
+        <span class="badge"><span><b>Атлет</b> бегового клуба Running Religion</span></span>
         <span class="badge"><span><b>Тренер</b> бегового клуба TRUNNER GANG по ОФП</span></span>
       </div>
     </div>
@@ -693,7 +708,7 @@ body.modal-lock{ overflow:hidden; }
       <p>Я начинала как артистка балета: сцены Мариинского, Большого и Михайловского театров, четыре года гастролей по миру с классическим репертуаром. Балет — это ежедневная работа с телом на пределе, где цена ошибки в технике измеряется травмой и пропущенным сезоном.</p>
       <p>Именно оттуда у меня привычка смотреть <strong>сначала на то, как человек двигается</strong>, и только потом — сколько он поднимает и как далеко бежит. После сцены я получила диплом о профессиональной переподготовке на тренера и с тех пор постоянно доучиваюсь: сила и периодизация, плиометрика и спринты, мобильность, миофасциальные техники, работа с беременными и восстановление после родов.</p>
       <div class="pull">Я не даю нагрузку, к которой тело не готово. Сначала мы строим базу, потом — результат.</div>
-      <p>Сегодня я тренер по общей и специальной физической подготовке, функциональному тренингу и бегу, атлет бегового бренда <strong>Running Religion</strong> и действующая бегунья — то есть я прохожу через то же, что и мои клиенты: подготовку, старты, восстановление. И провожу обучающие воркшопы для тех, кому важно разобраться в теме глубже.</p>
+      <p>Сегодня я тренер по общей и специальной физической подготовке, функциональному тренингу и бегу, атлет бегового клуба <strong>Running Religion</strong> и действующая бегунья — то есть я прохожу через то же, что и мои клиенты: подготовку, старты, восстановление. И провожу обучающие воркшопы для тех, кому важно разобраться в теме глубже.</p>
       <a class="btn btn-outline" href="#creds" style="margin-top:10px;">Смотреть образование и опыт</a>
     </div>
   </div>
@@ -715,7 +730,7 @@ body.modal-lock{ overflow:hidden; }
         <ul class="cred-list">
           <li><span><b>Артист балета.</b> Сцены Мариинского, Большого и Михайловского театров. 4 года гастролей по миру с классическим репертуаром.</span></li>
           <li><span><b>Диплом о профессиональной переподготовке</b> — тренер.</span></li>
-          <li><span><b>Действующая бегунья</b> и атлет бегового бренда Running Religion.</span></li>
+          <li><span><b>Действующая бегунья</b> и атлет бегового клуба Running Religion.</span></li>
         </ul>
 
         <h3 style="margin-top:34px;">Направления работы</h3>
@@ -818,14 +833,14 @@ body.modal-lock{ overflow:hidden; }
         <dl>
           <div><dt>Кому подходит</dt><dd>Тем, кому нужна форма и сила в целом, включая новичков без спортивного опыта.</dd></div>
           <div><dt>Какую проблему решает</dt><dd>Слабый мышечный корсет, быстрая утомляемость, травмы «на ровном месте».</dd></div>
-          <div><dt>Результат</dt><dd>Тело, которое выдерживает нагрузку — в беге, в спорте и когда несете ребенка на пятый этаж.</dd></div>
+          <div><dt>Результат</dt><dd>Крепкий мышечный корсет, запас выносливости и тело, которое не подводит под нагрузкой.</dd></div>
         </dl>
       </article>
 
       <article class="svc rv">
-        <span class="tag">Беременность и после родов</span>
+        <span class="tag">До и после родов</span>
         <h3>Подготовка для будущих и молодых мам</h3>
-        <p>Отдельное направление с профильным обучением: безопасная активность на разных сроках и восстановление после родов.</p>
+        <p>Отдельное направление: нагрузка под срок и самочувствие, тазовое дно и дыхание, плавное возвращение к силовым.</p>
         <dl>
           <div><dt>Кому подходит</dt><dd>Беременным, которым важно оставаться в форме без риска, и мамам в период восстановления.</dd></div>
           <div><dt>Какую проблему решает</dt><dd>Страх навредить себе и ребенку, противоречивые советы, непонятные ориентиры по нагрузке.</dd></div>
@@ -841,7 +856,6 @@ body.modal-lock{ overflow:hidden; }
           <img src="images/workshop.jpg" alt="Воркшоп «Силовая подготовка для бегунов» — тренер Катерина Лебедева" onerror="this.closest('.photo').classList.add('is-empty')">
           <div class="ph"><span>Воркшоп</span></div>
         </div>
-        <p class="caption">Силовая подготовка для бегунов</p>
       </div>
       <div class="svc-foot-text">
         <div class="tag">Воркшопы</div>
@@ -892,9 +906,9 @@ body.modal-lock{ overflow:hidden; }
         <p>Специальная физическая подготовка действующего бойца — работа на силу, мощность и выносливость под требования вида спорта.</p>
       </div>
       <div class="exp rv">
-        <div class="role">Бренд</div>
-        <h3>Атлет Running Religion</h3>
-        <p>Представляю беговой бренд как действующая бегунья: тренируюсь и выхожу на старты сама, поэтому знаю бег изнутри.</p>
+        <div class="role">Команда</div>
+        <h3>Атлет клуба Running Religion</h3>
+        <p>Бегаю в составе клуба и сама выхожу на старты, поэтому знаю бег изнутри, а не только со стороны плана.</p>
       </div>
       <div class="exp rv">
         <div class="role">Персональная работа</div>
@@ -1236,4 +1250,3 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 </body>
 </html>
-#test
