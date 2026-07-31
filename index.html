@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Катерина Лебедева — тренер по ОФП, СФП и бегу | Москва и онлайн</title>
+<meta name="description" content="Катерина Лебедева — тренер по общей и специальной физической подготовке и бегу. 15 лет в профессиональном движении: балет Мариинского, Большого и Михайловского театров. Персональные тренировки в Москве и онлайн-сопровождение.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Катерина Лебедева — тренер по ОФП, СФП и бегу">
+<meta property="og:description" content="Сила, техника и здоровье вместо случайных нагрузок. Персональные тренировки в Москве и онлайн.">
+<meta property="og:image" content="images/og.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#1E1726">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script>document.documentElement.className += ' js';</script>
+
+<style>
+:root{
+  /* цвет */
+  --color-bg:              #FCFBFD;
+  --color-bg-soft:         #F4EFF6;
+  --color-bg-sand:         #F3EEE8;
+  --color-dark:            #18151F;
+  --color-dark-elevated:   #231E2D;
+  --color-text:            #221C2B;
+  --color-text-secondary:  #61596D;
+  --color-text-light:      #F8F6FB;
+  --color-text-muted:      #A79BB4;
+  --color-border:          #DDD5E5;
+  --color-border-dark:     rgba(255,255,255,.12);
+  --color-accent:          #7560A7;
+  --color-accent-hover:    #654D99;
+  --color-accent-ink:      #654D99;   /* текст на accent-soft: AA 5.6:1 */
+  --color-accent-soft:     #ECE6F6;
+  --color-accent-glow:     rgba(117,96,167,.10);
+  --color-accent-faint:    #C9BCE0;   /* номера секций */
+  --color-success:         #4D7D66;
+  --color-error:           #B65A68;
+  --color-pink:            #E764A7;   /* локальный акцент воркшопа */
+  --color-focus:           #8C6CC2;
+  --color-lace:            rgba(255,255,255,.05);
+
+  /* типографика */
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fs-h1:    clamp(38px, 5vw, 60px);
+  --fs-h2:    clamp(32px, 4.6vw, 54px);
+  --fs-h3:    clamp(22px, 2.2vw, 30px);
+  --fs-body:  clamp(17px, 1.4vw, 18px);
+  --fs-small: clamp(14px, 1.1vw, 15px);
+  --fs-over:  clamp(12px, 1vw, 13px);
+  --lh-tight: 1.05;
+  --lh-heading: 1.12;
+  --lh-body: 1.65;
+  --lh-small: 1.5;
+  --tracking-overline: .12em;
+
+  /* ритм */
+  --section-space: clamp(80px, 10vw, 140px);
+  --container: 1180px;
+  --grid-gap: 32px;
+  --pad: clamp(20px, 5vw, 40px);
+
+  /* форма */
+  --radius-xs: 12px;
+  --radius-sm: 18px;
+  --radius-md: 24px;
+  --radius-lg: 34px;
+  --radius-pill: 999px;
+  --shadow-card:  0 10px 40px rgba(26,20,35,.06);
+  --shadow-hover: 0 18px 50px rgba(26,20,35,.10);
+  --transition: .28s ease;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  font-family:var(--font-body);
+  background:var(--color-bg);
+  color:var(--color-text);
+  font-size:var(--fs-body);
+  line-height:var(--lh-body);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  counter-reset:sec;
+}
+h1,h2,.display{
+  font-family:var(--font-heading);
+  font-weight:500;
+  line-height:var(--lh-heading);
+}
+h1{ font-size:var(--fs-h1); line-height:var(--lh-tight); letter-spacing:-.02em; }
+h2{ font-size:var(--fs-h2); letter-spacing:-.01em; }
+h3,h4{ font-family:var(--font-body); font-weight:600; line-height:1.25; letter-spacing:0; }
+h3{ font-size:var(--fs-h3); }
+a{ color:inherit; text-decoration:none; }
+img{ max-width:100%; display:block; }
+button, input, select, textarea{ font:inherit; color:inherit; }
+::selection{ background:var(--color-accent); color:#fff; }
+:focus-visible{ outline:2px solid var(--color-focus); outline-offset:3px; border-radius:4px; }
+
+.wrap{ max-width:var(--container); margin:0 auto; padding:0 var(--pad); position:relative; z-index:1; }
+section{ padding:var(--section-space) 0; }
+
+/* ---------- надзаголовки, номера секций ---------- */
+.eyebrow{
+  text-transform:uppercase; letter-spacing:var(--tracking-overline);
+  font-size:var(--fs-over); font-weight:600; line-height:1.4;
+  color:var(--color-accent); margin-bottom:18px;
+}
+.numbered{ counter-increment:sec; }
+.numbered .eyebrow{ display:flex; align-items:baseline; gap:14px; }
+.numbered .eyebrow::before{
+  content:"0" counter(sec);
+  font-family:var(--font-heading); font-weight:500; font-size:18px;
+  letter-spacing:.06em; line-height:1; color:var(--color-accent-faint); flex:none;
+}
+.section-head{ max-width:700px; margin-bottom:clamp(40px, 5vw, 66px); }
+.section-head h2{ margin-bottom:18px; }
+.section-head p{ color:var(--color-text-secondary); font-size:var(--fs-body); }
+.lead{ font-size:var(--fs-body); color:var(--color-text-secondary); }
+
+/* ---------- кружево на темных секциях: сетка + фестончатая кромка ---------- */
+.laced{ position:relative; overflow:hidden; }
+.laced::before{                      /* тюлевая сетка с розетками, растворяется вниз */
+  content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%23fff' stroke-width='.7'%3E%3Ccircle cx='48' cy='41' r='6.4'/%3E%3Ccircle cx='48' cy='55' r='6.4'/%3E%3Ccircle cx='41' cy='48' r='6.4'/%3E%3Ccircle cx='55' cy='48' r='6.4'/%3E%3C/g%3E%3Ccircle cx='48' cy='48' r='1.5' fill='%23fff'/%3E%3Ccircle cx='0' cy='0' r='1.1' fill='%23fff'/%3E%3Ccircle cx='96' cy='0' r='1.1' fill='%23fff'/%3E%3Ccircle cx='0' cy='96' r='1.1' fill='%23fff'/%3E%3Ccircle cx='96' cy='96' r='1.1' fill='%23fff'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(45deg,  transparent 0 23.4px, rgba(255,255,255,.6) 23.4px 24px),
+    repeating-linear-gradient(-45deg, transparent 0 23.4px, rgba(255,255,255,.6) 23.4px 24px);
+  background-size:96px 96px, auto, auto;
+  opacity:.09;
+  mask-image:linear-gradient(#000, rgba(0,0,0,.4) 45%, transparent 80%);
+  -webkit-mask-image:linear-gradient(#000, rgba(0,0,0,.4) 45%, transparent 80%);
+}
+.laced::after{                       /* фестоны по верхней кромке */
+  content:""; position:absolute; left:0; right:0; top:0; height:24px;
+  pointer-events:none; z-index:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='24' viewBox='0 0 56 24'%3E%3Cpath d='M0 0q14 20 28 0q14 20 28 0' fill='none' stroke='%23fff' stroke-width='.9'/%3E%3Cpath d='M0 0q14 12 28 0q14 12 28 0' fill='none' stroke='%23fff' stroke-width='.5'/%3E%3Ccircle cx='14' cy='15' r='1.2' fill='%23fff'/%3E%3Ccircle cx='42' cy='15' r='1.2' fill='%23fff'/%3E%3C/svg%3E");
+  background-size:56px 24px; background-repeat:repeat-x;
+  opacity:.22;
+}
+@media (prefers-reduced-motion:no-preference){
+  .laced::before{ transition:opacity var(--transition); }
+}
+
+/* ---------- кнопки ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  padding:16px 28px; border-radius:var(--radius-pill);
+  font-weight:600; font-size:16px; line-height:1; letter-spacing:.01em;
+  cursor:pointer; border:1px solid transparent; text-align:center;
+  transition:background var(--transition), color var(--transition),
+             transform var(--transition), box-shadow var(--transition),
+             border-color var(--transition);
+}
+.btn-primary{ background:var(--color-accent); color:#fff; }
+.btn-primary:hover{ background:var(--color-accent-hover); transform:translateY(-1px); box-shadow:0 12px 30px rgba(117,96,167,.25); }
+.btn-primary:active{ transform:translateY(0); opacity:.95; }
+.btn-outline{ background:transparent; border-color:var(--color-accent); color:var(--color-accent); }
+.btn-outline:hover{ background:var(--color-accent); color:#fff; transform:translateY(-1px); }
+.btn-outline:active{ transform:translateY(0); opacity:.95; }
+.btn-ghost-light{ background:transparent; border-color:rgba(255,255,255,.25); color:var(--color-text-light); }
+.btn-ghost-light:hover{ background:rgba(255,255,255,.08); }
+.btn-ghost-light:active{ background:rgba(255,255,255,.14); }
+.btn:disabled{ opacity:.55; cursor:not-allowed; transform:none; box-shadow:none; }
+
+/* ---------- фото ---------- */
+.photo{ position:relative; overflow:hidden; border-radius:var(--radius-md); background:var(--color-bg-soft); }
+.photo img{ width:100%; height:100%; object-fit:cover; }
+.photo .ph{
+  display:none; position:absolute; inset:0; padding:22px;
+  align-items:flex-end;
+  background:repeating-linear-gradient(135deg, #E9E2F3, #E9E2F3 2px, #F4EFFA 2px, #F4EFFA 24px);
+  border-radius:inherit;
+}
+.photo .ph span{
+  font-size:13px; color:var(--color-accent-ink); font-weight:500;
+  background:rgba(255,255,255,.86); padding:9px 14px; border-radius:10px;
+}
+.photo.is-empty img{ visibility:hidden; }
+.photo.is-empty .ph{ display:flex; }
+.caption{
+  font-size:var(--fs-small); color:var(--color-text-muted);
+  letter-spacing:.02em; margin-top:16px;
+}
+
+/* ---------- появление при скролле ---------- */
+.js .rv{ opacity:0; transform:translateY(20px); transition:opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1); }
+.js .rv.in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  .js .rv{ opacity:1; transform:none; transition:none; }
+  .btn:hover, .card:hover, .svc:hover{ transform:none; }
+}
+
+/* ---------- Шапка ---------- */
+header{
+  position:sticky; top:0; z-index:100;
+  background:rgba(252,251,253,.88); backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--color-border);
+}
+.nav{ display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:var(--container); margin:0 auto; padding:16px var(--pad); }
+.logo{ font-family:var(--font-heading); font-size:24px; font-weight:600; white-space:nowrap; letter-spacing:-.01em; }
+.logo small{
+  display:block; font-family:var(--font-body); font-size:10.5px; font-weight:600;
+  letter-spacing:var(--tracking-overline); text-transform:uppercase;
+  color:var(--color-accent); margin-top:4px;
+}
+.nav-links{ display:flex; gap:30px; font-size:15px; font-weight:500; }
+.nav-links a{ position:relative; padding:4px 0; }
+.nav-links a::after{ content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--color-accent); transition:width var(--transition); }
+.nav-links a:hover::after{ width:100%; }
+.nav-side{ display:flex; align-items:center; gap:12px; }
+.icon-link{
+  width:38px; height:38px; border-radius:50%; border:1px solid var(--color-border);
+  display:flex; align-items:center; justify-content:center; flex:none;
+  font-size:11px; font-weight:700; color:var(--color-text-secondary);
+  transition:background var(--transition), color var(--transition), border-color var(--transition);
+}
+.icon-link:hover{ background:var(--color-accent); color:#fff; border-color:var(--color-accent); }
+.nav-side .btn{ padding:13px 24px; font-size:15px; }
+.burger{ display:none; width:42px; height:42px; border:1px solid var(--color-border); border-radius:50%; background:none; cursor:pointer; position:relative; }
+.burger i{ position:absolute; left:12px; width:18px; height:1.5px; background:var(--color-text); transition:transform var(--transition), opacity .2s ease; }
+.burger i:nth-child(1){ top:15px; }
+.burger i:nth-child(2){ top:20.5px; }
+.burger i:nth-child(3){ top:26px; }
+.burger.open i:nth-child(1){ transform:translateY(5.5px) rotate(45deg); }
+.burger.open i:nth-child(2){ opacity:0; }
+.burger.open i:nth-child(3){ transform:translateY(-5.5px) rotate(-45deg); }
+.mobile-menu{ display:none; border-top:1px solid var(--color-border); background:var(--color-bg); padding:8px var(--pad) 24px; }
+.mobile-menu.open{ display:block; }
+.mobile-menu a{ display:block; padding:15px 0; font-size:17px; font-weight:500; border-bottom:1px solid var(--color-border); }
+.mobile-menu .btn{ width:100%; margin-top:20px; }
+@media (max-width:1000px){
+  .nav-links{ display:none; }
+  .nav-side .btn{ display:none; }
+  .burger{ display:block; }
+}
+
+/* ---------- Первый экран ---------- */
+.hero{ padding:clamp(40px,5vw,72px) 0 clamp(64px,7vw,104px); }
+.hero-grid{ display:grid; grid-template-columns:1.06fr .94fr; gap:clamp(32px,4.6vw,64px); align-items:center; }
+.hero-visual{ aspect-ratio:4/5; }
+.hero h1 em{ font-style:italic; color:var(--color-accent); }
+.hero .sub{ font-size:var(--fs-body); color:var(--color-text-secondary); margin:26px 0 20px; max-width:56ch; }
+.hero .for-whom{
+  font-size:var(--fs-small); color:var(--color-text-secondary);
+  padding-left:20px; border-left:1px solid var(--color-accent-faint);
+  margin-bottom:34px; max-width:52ch;
+}
+.hero-cta{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:32px; }
+.hero-badges{ display:flex; flex-direction:column; gap:12px; }
+.badge{
+  font-size:var(--fs-small); color:var(--color-text-secondary);
+  display:flex; gap:12px; align-items:baseline;
+}
+.badge::before{ content:""; width:4px; height:4px; border-radius:50%; background:var(--color-accent-faint); flex:none; transform:translateY(-4px); }
+.badge b{ color:var(--color-text); font-weight:600; }
+.hero-visual .stamp{
+  position:absolute; left:18px; bottom:18px; z-index:2;
+  color:#fff; font-size:13px; font-weight:500;
+  background:rgba(24,21,31,.5); backdrop-filter:blur(6px);
+  padding:9px 16px; border-radius:var(--radius-pill);
+}
+@media (max-width:940px){
+  .hero-grid{ grid-template-columns:1fr; }
+  .hero-visual{ aspect-ratio:3/4; max-height:66vh; order:-1; }
+}
+
+/* ---------- Полоса с фактами ---------- */
+.strip{ background:var(--color-dark); color:var(--color-text-light); padding:clamp(48px,6vw,72px) 0; }
+.strip .wrap{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+.strip .item{ padding:0 clamp(18px,2.4vw,32px); border-left:1px solid var(--color-border-dark); }
+.strip .item:first-child{ border-left:none; padding-left:0; }
+.strip .item b{
+  display:block; font-family:var(--font-heading); font-weight:500;
+  font-size:clamp(48px,5.4vw,72px); line-height:1; letter-spacing:-.02em;
+  color:#fff; margin-bottom:14px;
+}
+.strip .item span{ font-size:var(--fs-small); line-height:var(--lh-small); color:var(--color-text-muted); display:block; }
+@media (max-width:860px){
+  .strip .wrap{ grid-template-columns:1fr 1fr; row-gap:36px; }
+  .strip .item:nth-child(odd){ border-left:none; padding-left:0; }
+}
+
+/* ---------- Обо мне ---------- */
+.story-grid{ display:grid; grid-template-columns:.86fr 1.14fr; gap:clamp(32px,5vw,72px); align-items:center; }
+.story-photo{ aspect-ratio:3/4; }
+.story-media .caption{ margin-top:16px; }
+.story-text h2{ margin-bottom:24px; }
+.story-text p{ color:var(--color-text-secondary); margin-bottom:18px; }
+.story-text p strong{ color:var(--color-text); font-weight:600; }
+.pull{
+  border-left:1px solid var(--color-accent-faint); padding:6px 0 6px 24px; margin:30px 0;
+  font-family:var(--font-heading); font-style:italic; font-weight:500;
+  font-size:clamp(22px,2.4vw,30px); line-height:1.32; color:var(--color-text);
+}
+.story-text .btn{ margin-top:12px; }
+@media (max-width:900px){ .story-grid{ grid-template-columns:1fr; } }
+
+/* ---------- Квалификация ---------- */
+.creds{ background:var(--color-bg-soft); }
+.creds-grid{ display:grid; grid-template-columns:1fr 1fr; gap:var(--grid-gap); align-items:start; }
+.cred-card{
+  background:transparent; border:1px solid var(--color-border);
+  border-radius:var(--radius-md); padding:clamp(26px,3.2vw,40px);
+}
+.cred-card h3{ font-size:20px; margin-bottom:6px; }
+.cred-card .note{
+  font-size:var(--fs-over); text-transform:uppercase; letter-spacing:var(--tracking-overline);
+  color:var(--color-accent); font-weight:600; margin-bottom:24px;
+}
+.cred-list{ list-style:none; display:flex; flex-direction:column; }
+.cred-list li{
+  padding:15px 0; border-bottom:1px solid var(--color-border);
+  font-size:var(--fs-small); line-height:var(--lh-small);
+  display:flex; gap:14px; align-items:flex-start;
+}
+.cred-list li:last-child{ border-bottom:none; padding-bottom:0; }
+.cred-list li::before{ content:""; width:4px; height:4px; border-radius:50%; background:var(--color-accent-faint); margin-top:9px; flex:none; }
+.cred-list span{ color:var(--color-text-secondary); }
+.cred-list b{ font-weight:600; color:var(--color-text); }
+.cred-more{
+  margin-top:22px; background:none; border:none; cursor:pointer; padding:0;
+  font-size:var(--fs-small); font-weight:600; color:var(--color-accent);
+  display:inline-flex; align-items:center; gap:8px;
+  transition:color var(--transition);
+}
+.cred-more:hover{ color:var(--color-accent-hover); }
+.cred-more::after{ content:"↓"; transition:transform var(--transition); }
+.cred-more.open::after{ transform:rotate(180deg); }
+.cred-hidden{ display:none; }
+.cred-hidden.show{ display:flex; }
+@media (max-width:900px){ .creds-grid{ grid-template-columns:1fr; } }
+
+/* ---------- Услуги ---------- */
+.svc-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:var(--grid-gap); }
+.svc{
+  background:#fff; border:1px solid var(--color-border); border-radius:var(--radius-md);
+  padding:clamp(26px,2.8vw,34px); display:flex; flex-direction:column; gap:14px;
+  box-shadow:var(--shadow-card);
+  transition:transform var(--transition), box-shadow var(--transition);
+}
+.svc:hover{ transform:translateY(-4px); box-shadow:var(--shadow-hover); }
+.svc .tag{
+  align-self:flex-start; display:inline-flex; align-items:center; gap:8px;
+  font-size:var(--fs-over); text-transform:uppercase; letter-spacing:var(--tracking-overline);
+  font-weight:600; color:var(--color-accent-ink); background:var(--color-accent-soft);
+  padding:6px 13px; border-radius:var(--radius-pill);
+}
+.svc h3{ font-size:22px; }
+.svc > p{ font-size:var(--fs-small); line-height:var(--lh-small); color:var(--color-text-secondary); }
+.svc dl{ margin-top:auto; padding-top:20px; border-top:1px solid var(--color-border); display:grid; gap:15px; }
+.svc dt{
+  font-size:11px; text-transform:uppercase; letter-spacing:var(--tracking-overline);
+  color:var(--color-text-muted); font-weight:600; margin-bottom:5px;
+}
+.svc dd{ font-size:var(--fs-small); line-height:var(--lh-small); }
+@media (max-width:1040px){ .svc-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:680px){ .svc-grid{ grid-template-columns:1fr; } }
+
+.svc-foot{
+  margin-top:var(--grid-gap); background:#fff; border:1px solid var(--color-border);
+  border-radius:var(--radius-md); padding:clamp(22px,2.6vw,30px);
+  display:flex; gap:clamp(22px,3vw,36px); align-items:center; flex-wrap:wrap;
+  box-shadow:var(--shadow-card);
+}
+.svc-foot-media{ flex:none; width:clamp(140px,16vw,190px); }
+.svc-foot-media .photo{ aspect-ratio:1; border-radius:var(--radius-sm); }
+.svc-foot-media .caption{ margin-top:12px; font-size:12px; text-align:center; }
+.svc-foot-text{ flex:1 1 320px; }
+.svc-foot .tag{
+  display:inline-flex; align-items:center; gap:9px; margin-bottom:12px;
+  font-size:var(--fs-over); text-transform:uppercase; letter-spacing:var(--tracking-overline);
+  font-weight:600; color:var(--color-accent-ink);
+}
+.svc-foot .tag::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--color-pink); opacity:.75; flex:none; }
+.svc-foot h3{ font-size:22px; margin-bottom:8px; }
+.svc-foot p{ font-size:var(--fs-small); line-height:var(--lh-small); color:var(--color-text-secondary); }
+@media (max-width:680px){
+  .svc-foot{ flex-direction:column; align-items:stretch; }
+  .svc-foot-media{ width:100%; }
+  .svc-foot-media .photo{ aspect-ratio:16/10; }
+  .svc-foot .btn{ width:100%; }
+}
+
+/* ---------- Подход ---------- */
+.approach{ background:var(--color-dark); color:var(--color-text-light); }
+.approach .section-head h2{ color:#fff; }
+.approach .section-head p{ color:var(--color-text-muted); }
+.approach .eyebrow{ color:var(--color-accent-faint); }
+.approach .numbered .eyebrow::before{ color:rgba(255,255,255,.3); }
+.appr-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }
+.appr{
+  background:var(--color-dark-elevated); border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius-md); padding:28px 24px;
+}
+.appr .n{ font-family:var(--font-heading); font-size:26px; font-weight:500; color:var(--color-accent-faint); margin-bottom:20px; line-height:1; }
+.appr h4{ font-size:17px; margin-bottom:10px; color:#fff; }
+.appr p{ font-size:var(--fs-small); line-height:var(--lh-small); color:var(--color-text-muted); }
+@media (max-width:1040px){ .appr-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .appr-grid{ grid-template-columns:1fr; } }
+
+/* ---------- Практика ---------- */
+.exp-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:var(--grid-gap); }
+.exp{ border:1px solid var(--color-border); border-radius:var(--radius-md); padding:clamp(26px,3vw,36px); background:#fff; box-shadow:var(--shadow-card); }
+.exp .role{
+  font-size:var(--fs-over); text-transform:uppercase; letter-spacing:var(--tracking-overline);
+  font-weight:600; color:var(--color-accent); margin-bottom:14px;
+}
+.exp h3{ font-size:21px; margin-bottom:10px; }
+.exp p{ font-size:var(--fs-small); line-height:var(--lh-small); color:var(--color-text-secondary); }
+@media (max-width:800px){ .exp-grid{ grid-template-columns:1fr; } }
+.gallery{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.gallery .photo{ aspect-ratio:3/4; }
+@media (max-width:900px){ .gallery{ grid-template-columns:1fr 1fr; } }
+
+/* ---------- Отзывы (стили сохранены на будущее) ---------- */
+.reviews, .bg-sand{ background:var(--color-bg-sand); }
+.rev-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:var(--grid-gap); }
+.rev{ background:#fff; border:1px solid var(--color-border); border-radius:var(--radius-md); padding:clamp(26px,3vw,34px); display:flex; flex-direction:column; gap:18px; }
+.rev .q{ font-family:var(--font-heading); font-size:22px; line-height:1.4; }
+.rev .who{ display:flex; align-items:center; gap:14px; margin-top:auto; }
+.rev .ava{ width:44px; height:44px; border-radius:50%; background:var(--color-accent-soft); flex:none; overflow:hidden; }
+.rev .ava img{ width:100%; height:100%; object-fit:cover; }
+.rev .who b{ font-size:var(--fs-small); display:block; }
+.rev .who span{ font-size:13px; color:var(--color-text-secondary); }
+@media (max-width:980px){ .rev-grid{ grid-template-columns:1fr; } }
+
+/* ---------- Как начать ---------- */
+.steps-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:var(--grid-gap); counter-reset:s; position:relative; }
+.steps-grid::before{
+  content:""; position:absolute; left:0; right:0; top:22px; height:1px;
+  background:var(--color-border);
+}
+.step{ position:relative; padding-top:56px; }
+.step::before{
+  counter-increment:s; content:counter(s);
+  position:absolute; top:0; left:0;
+  width:44px; height:44px; border-radius:50%;
+  background:var(--color-bg-sand); border:1px solid var(--color-border);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-heading); font-size:20px; font-weight:500; color:var(--color-accent);
+}
+.step h4{ font-size:19px; margin-bottom:10px; }
+.step p{ font-size:var(--fs-small); line-height:var(--lh-small); color:var(--color-text-secondary); }
+@media (max-width:840px){
+  .steps-grid{ grid-template-columns:1fr; row-gap:36px; }
+  .steps-grid::before{ display:none; }
+}
+
+/* ---------- Вопросы ---------- */
+.faq{ background:var(--color-bg); }
+.faq-wrap{ max-width:880px; }
+.faq-item{ border-bottom:1px solid var(--color-border); transition:background var(--transition); }
+.faq-item.open{ background:var(--color-bg-soft); border-radius:var(--radius-sm); border-bottom-color:transparent; }
+.faq-q{
+  width:100%; background:none; border:none; cursor:pointer; text-align:left;
+  padding:26px 56px 26px 0; position:relative;
+  font-family:var(--font-heading); font-size:clamp(21px,2vw,27px); font-weight:500;
+  line-height:1.28; color:var(--color-text);
+  transition:padding var(--transition);
+}
+.faq-item.open .faq-q{ padding-left:26px; padding-right:70px; }
+.faq-q::after{
+  content:"+"; position:absolute; right:8px; top:50%; transform:translateY(-50%);
+  font-family:var(--font-body); font-size:24px; font-weight:300; color:var(--color-accent);
+  transition:transform var(--transition);
+}
+.faq-item.open .faq-q::after{ right:26px; transform:translateY(-50%) rotate(45deg); }
+.faq-a{ max-height:0; overflow:hidden; transition:max-height .34s ease; }
+.faq-a p{ padding:0 56px 28px 0; font-size:var(--fs-small); line-height:var(--lh-body); color:var(--color-text-secondary); }
+.faq-item.open .faq-a{ max-height:460px; }
+.faq-item.open .faq-a p{ padding-left:26px; }
+
+/* ---------- Заявка ---------- */
+.final{ background:var(--color-dark); color:var(--color-text-light); }
+.final-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,70px); align-items:center; }
+.final .eyebrow{ color:var(--color-accent-faint); }
+.final .numbered .eyebrow::before{ color:rgba(255,255,255,.3); }
+.final h2{ color:#fff; margin-bottom:22px; }
+.final .lead{ color:var(--color-text-muted); margin-bottom:32px; }
+.promises{ display:grid; gap:14px; margin-bottom:34px; }
+.promises div{ font-size:var(--fs-small); display:flex; gap:13px; color:var(--color-text-light); }
+.promises div::before{ content:"✓"; color:var(--color-accent-faint); font-weight:700; flex:none; }
+.final-social{ display:flex; gap:12px; flex-wrap:wrap; }
+
+.form-card{ background:#fff; color:var(--color-text); border-radius:var(--radius-lg); padding:clamp(26px,3.4vw,42px); }
+.form-card h3{ font-size:24px; margin-bottom:8px; }
+.form-card .hint{ font-size:var(--fs-small); color:var(--color-text-secondary); margin-bottom:28px; }
+.field{ margin-bottom:18px; }
+.field label{
+  font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:var(--tracking-overline);
+  color:var(--color-text-secondary); display:block; margin-bottom:9px;
+}
+.field input, .field select, .field textarea{
+  width:100%; padding:15px 16px; border-radius:var(--radius-xs);
+  border:1px solid var(--color-border); background:#fff; font-size:16px;
+  transition:border-color var(--transition), box-shadow var(--transition);
+}
+.field textarea{ min-height:92px; resize:vertical; line-height:1.5; }
+.field input:focus, .field select:focus, .field textarea:focus{
+  outline:none; border-color:var(--color-accent);
+  box-shadow:0 0 0 4px var(--color-accent-glow);
+}
+.field input.err, .field select.err, .field textarea.err{ border-color:var(--color-error); }
+.field input::placeholder, .field textarea::placeholder{ color:var(--color-text-muted); }
+.field-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.consent{ display:flex; gap:12px; align-items:flex-start; margin:22px 0 6px; }
+.consent input{ width:18px; height:18px; margin-top:2px; flex:none; accent-color:var(--color-accent); }
+.consent label{ font-size:13px; line-height:1.5; color:var(--color-text-secondary); }
+.consent a{ color:var(--color-accent); text-decoration:underline; }
+.form-card .btn{ width:100%; margin-top:16px; }
+.toast{ font-size:var(--fs-small); margin-top:16px; text-align:center; min-height:22px; font-weight:500; }
+.toast.ok{ color:var(--color-success); }
+.toast.err{ color:var(--color-error); }
+@media (max-width:940px){ .final-grid{ grid-template-columns:1fr; } }
+@media (max-width:520px){ .field-row{ grid-template-columns:1fr; } }
+
+/* ---------- Подвал ---------- */
+footer{ background:var(--color-dark); color:var(--color-text-light); padding:clamp(44px,5vw,64px) 0 40px; }
+footer .wrap{ border-top:1px solid var(--color-border-dark); padding-top:clamp(38px,4vw,56px); }
+.foot-grid{ display:flex; justify-content:space-between; align-items:flex-start; gap:34px; flex-wrap:wrap; }
+.foot-grid .logo small{ color:var(--color-accent-faint); }
+.foot-grid p{ font-size:var(--fs-small); color:var(--color-text-muted); max-width:360px; margin-top:14px; }
+.foot-social{ display:flex; gap:12px; flex-wrap:wrap; }
+.foot-social a{
+  display:inline-flex; align-items:center; gap:9px;
+  border:1px solid var(--color-border-dark); border-radius:var(--radius-pill);
+  padding:13px 24px; font-size:var(--fs-small); font-weight:600;
+  transition:background var(--transition), border-color var(--transition);
+}
+.foot-social a:hover{ background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.22); }
+.foot-bottom{
+  margin-top:44px; padding-top:24px; border-top:1px solid var(--color-border-dark);
+  display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
+  font-size:13px; color:var(--color-text-muted);
+}
+.foot-bottom a:hover{ color:var(--color-text-light); }
+
+/* ---------- окно «заявка отправлена» ---------- */
+.modal{
+  position:fixed; inset:0; z-index:200; display:none;
+  align-items:center; justify-content:center; padding:var(--pad);
+}
+.modal.open{ display:flex; }
+.modal-veil{
+  position:absolute; inset:0; background:rgba(24,21,31,.62);
+  backdrop-filter:blur(6px); animation:veilIn .25s ease both;
+}
+.modal-card{
+  position:relative; z-index:1; width:100%; max-width:470px;
+  background:#fff; border-radius:var(--radius-lg);
+  padding:clamp(34px,4vw,46px) clamp(24px,3.4vw,42px) clamp(28px,3vw,36px);
+  text-align:center; box-shadow:0 30px 80px rgba(24,21,31,.32);
+  animation:cardIn .32s cubic-bezier(.2,.8,.3,1) both;
+  max-height:calc(100vh - 2 * var(--pad)); overflow-y:auto;
+}
+.modal-card::before{           /* кружевная кромка сверху */
+  content:""; position:absolute; left:0; right:0; top:0; height:24px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='24' viewBox='0 0 56 24'%3E%3Cpath d='M0 0q14 20 28 0q14 20 28 0' fill='none' stroke='%237560A7' stroke-width='1'/%3E%3Ccircle cx='14' cy='15' r='1.4' fill='%237560A7'/%3E%3Ccircle cx='42' cy='15' r='1.4' fill='%237560A7'/%3E%3C/svg%3E"); background-size:56px 24px; background-repeat:repeat-x;
+  opacity:.5; border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+}
+@keyframes veilIn{ from{ opacity:0 } to{ opacity:1 } }
+@keyframes cardIn{ from{ opacity:0; transform:translateY(16px) scale(.98) } to{ opacity:1; transform:none } }
+@media (prefers-reduced-motion:reduce){
+  .modal-veil, .modal-card{ animation:none; }
+}
+.modal-mark{
+  width:62px; height:62px; margin:14px auto 22px; border-radius:50%;
+  background:var(--color-accent-soft); color:var(--color-accent-ink);
+  display:flex; align-items:center; justify-content:center;
+  font-size:28px; line-height:1;
+}
+.modal-card h3{ font-family:var(--font-heading); font-weight:500; font-size:clamp(26px,3vw,34px); line-height:1.15; margin-bottom:14px; }
+.modal-card p{ font-size:var(--fs-small); line-height:var(--lh-body); color:var(--color-text-secondary); margin-bottom:26px; }
+.modal-card p b{ color:var(--color-text); font-weight:600; }
+.modal-actions{ display:grid; gap:12px; }
+.modal-actions .btn{ width:100%; }
+.modal-close{
+  position:absolute; top:16px; right:16px; width:38px; height:38px;
+  border:none; background:none; cursor:pointer; border-radius:50%;
+  font-size:22px; line-height:1; color:var(--color-text-secondary);
+  transition:background var(--transition), color var(--transition);
+}
+.modal-close:hover{ background:var(--color-bg-soft); color:var(--color-text); }
+body.modal-lock{ overflow:hidden; }
+
+/* ---------- Липкая панель на мобильном ---------- */
+.sticky-cta{
+  position:fixed; left:0; right:0; bottom:0; z-index:90; display:none;
+  gap:12px; align-items:center; min-height:72px;
+  padding:12px var(--pad) calc(12px + env(safe-area-inset-bottom));
+  background:rgba(24,21,31,.92); backdrop-filter:blur(18px);
+  border-top:1px solid var(--color-border-dark);
+}
+.sticky-cta .btn{ padding:14px 20px; font-size:15px; }
+.sticky-cta .btn-ghost-light{ flex:0 0 auto; }
+.sticky-cta .btn-primary{ flex:1; }
+@media (max-width:1000px){
+  .sticky-cta{ display:flex; }
+  footer{ padding-bottom:104px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Шапка -->
+<header>
+  <div class="nav">
+    <a href="#top" class="logo">Катерина Лебедева<small>ОФП · СФП · Бег</small></a>
+    <nav class="nav-links">
+      <a href="#story">Обо мне</a>
+      <a href="#creds">Квалификация</a>
+      <a href="#services">Услуги</a>
+      <a href="#approach">Подход</a>
+      <a href="#experience">Опыт</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="nav-side">
+      <a class="icon-link" href="https://instagram.com/katrin_swan" target="_blank" rel="noopener" aria-label="Instagram @katrin_swan">IG</a>
+      <a class="icon-link" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+      <a class="btn btn-primary" href="#start">Записаться</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#story">Обо мне</a>
+    <a href="#creds">Квалификация</a>
+    <a href="#services">Услуги</a>
+    <a href="#approach">Подход</a>
+    <a href="#experience">Опыт</a>
+    <a href="#faq">Вопросы</a>
+    <a class="btn btn-primary" href="#start">Записаться на консультацию</a>
+  </div>
+</header>
+
+<!-- Первый экран -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Тренер по ОФП, СФП и бегу · Москва и онлайн</div>
+      <h1>Сильное тело начинается с <em>техники</em>, а не с километров</h1>
+      <p class="sub">Меня зовут Катерина Лебедева. 15 лет я работала с телом на сцене — в Мариинском, Большом и Михайловском театрах. Сейчас я тренер по общей и специальной физической подготовке и действующая бегунья: выстраиваю тренировки так, чтобы вы становились сильнее и не ломались по пути.</p>
+      <p class="for-whom">Для тех, кто хочет начать бегать без боли в коленях, пробежать первую дистанцию, вернуть форму после перерыва или беременности — и наконец понять, что и зачем вы делаете на тренировке.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#start">Записаться на консультацию</a>
+        <a class="btn btn-outline" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+      <div class="hero-badges">
+        <span class="badge"><span><b>Артист балета</b> — Мариинский, Большой, Михайловский</span></span>
+        <span class="badge"><span><b>Атлет</b> бегового бренда Running Religion</span></span>
+        <span class="badge"><span><b>Тренер</b> бегового клуба TRUNNER GANG по ОФП</span></span>
+      </div>
+    </div>
+    <div class="photo hero-visual">
+      <img src="images/hero.jpg" alt="Катерина Лебедева на беговой тренировке" onerror="this.closest('.photo').classList.add('is-empty')">
+      <div class="ph"><span>Катерина Лебедева</span></div>
+      <div class="stamp">Москва · персонально 1:1 и онлайн</div>
+    </div>
+  </div>
+</section>
+
+<!-- Полоса с фактами -->
+<div class="strip laced">
+  <div class="wrap">
+    <div class="item"><b>15 лет</b><span>в профессиональном движении: классический балет и сцена</span></div>
+    <div class="item"><b>3 театра</b><span>Мариинский, Большой, Михайловский — классический репертуар</span></div>
+    <div class="item"><b>4 года</b><span>гастролей по миру в составе балетной труппы</span></div>
+    <div class="item"><b>13+</b><span>профильных курсов: сила, бег, реабилитация, работа с беременными</span></div>
+  </div>
+</div>
+
+<!-- Обо мне -->
+<section id="story">
+  <div class="wrap story-grid">
+    <div class="story-media rv">
+      <div class="photo story-photo">
+        <img src="images/about.jpg" alt="Катерина Лебедева на сцене, классический репертуар" onerror="this.closest('.photo').classList.add('is-empty')">
+        <div class="ph"><span>Катерина Лебедева</span></div>
+      </div>
+      <p class="caption">Классический репертуар. Со сцены — к бегу и силовой подготовке.</p>
+    </div>
+    <div class="story-text numbered rv">
+      <div class="eyebrow">Обо мне</div>
+      <h2>От классического балета — к силе и бегу</h2>
+      <p>Я начинала как артистка балета: сцены Мариинского, Большого и Михайловского театров, четыре года гастролей по миру с классическим репертуаром. Балет — это ежедневная работа с телом на пределе, где цена ошибки в технике измеряется травмой и пропущенным сезоном.</p>
+      <p>Именно оттуда у меня привычка смотреть <strong>сначала на то, как человек двигается</strong>, и только потом — сколько он поднимает и как далеко бежит. После сцены я получила диплом о профессиональной переподготовке на тренера и с тех пор постоянно доучиваюсь: сила и периодизация, плиометрика и спринты, мобильность, миофасциальные техники, работа с беременными и восстановление после родов.</p>
+      <div class="pull">Я не даю нагрузку, к которой тело не готово. Сначала мы строим базу, потом — результат.</div>
+      <p>Сегодня я тренер по общей и специальной физической подготовке, функциональному тренингу и бегу, атлет бегового бренда <strong>Running Religion</strong> и действующая бегунья — то есть я прохожу через то же, что и мои клиенты: подготовку, старты, восстановление. И провожу обучающие воркшопы для тех, кому важно разобраться в теме глубже.</p>
+      <a class="btn btn-outline" href="#creds" style="margin-top:10px;">Смотреть образование и опыт</a>
+    </div>
+  </div>
+</section>
+
+<!-- Квалификация -->
+<section id="creds" class="creds">
+  <div class="wrap">
+    <div class="section-head numbered rv">
+      <div class="eyebrow">Квалификация</div>
+      <h2>Тело как профессия, а не как хобби</h2>
+      <p>Профессиональная база в движении и профильное образование по силовой подготовке, бегу, реабилитации и работе с женским здоровьем.</p>
+    </div>
+    <div class="creds-grid">
+
+      <div class="cred-card rv">
+        <h3>Базовое образование</h3>
+        <p class="note">Профессия и переподготовка</p>
+        <ul class="cred-list">
+          <li><span><b>Артист балета.</b> Сцены Мариинского, Большого и Михайловского театров. 4 года гастролей по миру с классическим репертуаром.</span></li>
+          <li><span><b>Диплом о профессиональной переподготовке</b> — тренер.</span></li>
+          <li><span><b>Действующая бегунья</b> и атлет бегового бренда Running Religion.</span></li>
+        </ul>
+
+        <h3 style="margin-top:34px;">Направления работы</h3>
+        <p class="note">С чем я работаю каждый день</p>
+        <ul class="cred-list">
+          <li><span>Общая и специальная физическая подготовка (ОФП / СФП)</span></li>
+          <li><span>Функциональный и силовой тренинг</span></li>
+          <li><span>Бег: от первых километров до подготовки к старту</span></li>
+          <li><span>Беременность и восстановление после родов</span></li>
+          <li><span>Обучающие воркшопы на спортивные темы</span></li>
+        </ul>
+      </div>
+
+      <div class="cred-card rv">
+        <h3>Дополнительное обучение</h3>
+        <p class="note">Курсы и специализации</p>
+        <ul class="cred-list">
+          <li><span><b>«Принципы движения»</b> — Polestar</span></li>
+          <li><span><b>«Основы персонального тренинга»</b> — Анна Воронина</span></li>
+          <li><span><b>«Программирование и периодизация силового тренинга»</b> — Смолий, Медведев</span></li>
+          <li><span><b>«Плиометрика, баллистика, спринты»</b> — Athletic Training</span></li>
+          <li><span><b>«Динамический стретчинг»</b> — Анатомия</span></li>
+          <li><span><b>«Pilates mat»</b> — Анатомия</span></li>
+        </ul>
+        <ul class="cred-list cred-hidden" id="credsMore">
+          <li><span><b>«Беременность и фитнес»</b> — Wellness Company</span></li>
+          <li><span><b>«Стабилизация-мобилизация, баланс работы мышечной цепи»</b> — Elepha Health</span></li>
+          <li><span><b>«Триггерно-фасциальная терапия в спорте»</b> — Elepha Health</span></li>
+          <li><span><b>«Работа с беременными»</b> — Topstretching</span></li>
+          <li><span><b>«Тазовое дно»</b> — Лунегова</span></li>
+          <li><span><b>«Анатомический минимум»</b> — Александра Кибзий</span></li>
+          <li><span><b>Реабилитация и выход в силовой тренинг</b></span></li>
+        </ul>
+        <button class="cred-more" id="credsToggle" aria-expanded="false" aria-controls="credsMore">Показать все курсы</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Услуги -->
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="section-head numbered rv">
+      <div class="eyebrow">Как я помогаю</div>
+      <h2>Форматы работы под вашу ситуацию</h2>
+      <p>Можно начать с разового плана, а можно взять полное сопровождение — очно в Москве или онлайн из любого города.</p>
+    </div>
+
+    <div class="svc-grid">
+
+      <article class="svc rv">
+        <span class="tag">Офлайн · Москва</span>
+        <h3>Персональные тренировки</h3>
+        <p>Тренировки один на один — в зале, на стадионе или в парке: технику поправляю сразу, на месте.</p>
+        <dl>
+          <div><dt>Кому подходит</dt><dd>Тем, кому нужен личный контакт и взгляд со стороны на каждом повторении.</dd></div>
+          <div><dt>Какую проблему решает</dt><dd>Нет уверенности в технике, страшно тренироваться самостоятельно, «делаю — но не там чувствую».</dd></div>
+          <div><dt>Результат</dt><dd>Правильное движение с первых тренировок и ошибки, исправленные до того, как стали травмой.</dd></div>
+        </dl>
+      </article>
+
+      <article class="svc rv">
+        <span class="tag">Онлайн</span>
+        <h3>Онлайн-сопровождение</h3>
+        <p>План, регулярная связь, разбор видео и корректировка нагрузки по вашим отчетам и метрикам.</p>
+        <dl>
+          <div><dt>Кому подходит</dt><dd>Тем, кто живет не в Москве, много ездит или предпочитает тренироваться сам.</dd></div>
+          <div><dt>Какую проблему решает</dt><dd>Тренировки «в вакууме»: нет системы, обратной связи и понимания, что делать дальше.</dd></div>
+          <div><dt>Результат</dt><dd>Ощущение, что вас ведут: понятный план, ответы на вопросы и своевременная коррекция.</dd></div>
+        </dl>
+      </article>
+
+      <article class="svc rv">
+        <span class="tag">План</span>
+        <h3>Персональный тренировочный план</h3>
+        <p>Индивидуальная программа под цель, уровень и реальный график жизни — без ежедневного сопровождения.</p>
+        <dl>
+          <div><dt>Кому подходит</dt><dd>Дисциплинированным и самостоятельным, кому не хватает только структуры.</dd></div>
+          <div><dt>Какую проблему решает</dt><dd>Хаотичные тренировки, повторение одного и того же, отсутствие прогрессии.</dd></div>
+          <div><dt>Результат</dt><dd>План на 4–12 недель с продуманной прогрессией нагрузки и точками контроля.</dd></div>
+        </dl>
+      </article>
+
+      <article class="svc rv">
+        <span class="tag">Бег</span>
+        <h3>Подготовка к забегу</h3>
+        <p>От первых 5 км до длинных дистанций: объем, техника, темповые работы и адекватное восстановление.</p>
+        <dl>
+          <div><dt>Кому подходит</dt><dd>Тем, у кого есть конкретная дистанция или желание улучшить свое время.</dd></div>
+          <div><dt>Какую проблему решает</dt><dd>Непонятно, как подойти к старту без перегрузки, боли в коленях и выгорания за две недели до забега.</dd></div>
+          <div><dt>Результат</dt><dd>Финиш в хорошем состоянии — и понимание, за счет чего вы к нему пришли.</dd></div>
+        </dl>
+      </article>
+
+      <article class="svc rv">
+        <span class="tag">ОФП / СФП</span>
+        <h3>Общая и специальная подготовка</h3>
+        <p>Сила, выносливость, мобильность и функциональный тренинг — фундамент и для бега, и для жизни без болей в спине.</p>
+        <dl>
+          <div><dt>Кому подходит</dt><dd>Тем, кому нужна форма и сила в целом, включая новичков без спортивного опыта.</dd></div>
+          <div><dt>Какую проблему решает</dt><dd>Слабый мышечный корсет, быстрая утомляемость, травмы «на ровном месте».</dd></div>
+          <div><dt>Результат</dt><dd>Тело, которое выдерживает нагрузку — в беге, в спорте и когда несете ребенка на пятый этаж.</dd></div>
+        </dl>
+      </article>
+
+      <article class="svc rv">
+        <span class="tag">Беременность и после родов</span>
+        <h3>Подготовка для будущих и молодых мам</h3>
+        <p>Отдельное направление с профильным обучением: безопасная активность на разных сроках и восстановление после родов.</p>
+        <dl>
+          <div><dt>Кому подходит</dt><dd>Беременным, которым важно оставаться в форме без риска, и мамам в период восстановления.</dd></div>
+          <div><dt>Какую проблему решает</dt><dd>Страх навредить себе и ребенку, противоречивые советы, непонятные ориентиры по нагрузке.</dd></div>
+          <div><dt>Результат</dt><dd>Активность без риска, работающее тазовое дно и спокойное возвращение к силовым.</dd></div>
+        </dl>
+      </article>
+
+    </div>
+
+    <div class="svc-foot rv">
+      <div class="svc-foot-media">
+        <div class="photo">
+          <img src="images/workshop.jpg" alt="Воркшоп «Силовая подготовка для бегунов» — тренер Катерина Лебедева" onerror="this.closest('.photo').classList.add('is-empty')">
+          <div class="ph"><span>Воркшоп</span></div>
+        </div>
+        <p class="caption">Силовая подготовка для бегунов</p>
+      </div>
+      <div class="svc-foot-text">
+        <div class="tag">Воркшопы</div>
+        <h3>Обучающие воркшопы</h3>
+        <p>Провожу воркшопы на спортивные темы — для тренеров, беговых клубов и всех, кто хочет разобраться в технике, нагрузке и восстановлении подробнее. Последний — «Силовая подготовка для бегунов».</p>
+      </div>
+      <a class="btn btn-outline" href="#start">Узнать про ближайший</a>
+    </div>
+  </div>
+</section>
+
+<!-- Подход -->
+<section id="approach" class="approach laced">
+  <div class="wrap">
+    <div class="section-head numbered rv">
+      <div class="eyebrow">Мой подход</div>
+      <h2>Пять принципов, на которых строится работа</h2>
+      <p>Результат держится на выстроенном процессе, а не на одном рывке — этому меня научили и сцена, и бег.</p>
+    </div>
+    <div class="appr-grid">
+      <div class="appr rv"><div class="n">01</div><h4>Системность</h4><p>Каждая тренировка — часть плана с понятной задачей, а не набор случайных упражнений «на все тело».</p></div>
+      <div class="appr rv"><div class="n">02</div><h4>Индивидуальный подход</h4><p>Учитываю уровень, здоровье, историю травм, график и цель. Универсальных планов у меня нет.</p></div>
+      <div class="appr rv"><div class="n">03</div><h4>Работа с техникой</h4><p>15 лет балета научили: прогресс начинается с правильного движения, а не с добавленного веса или километра.</p></div>
+      <div class="appr rv"><div class="n">04</div><h4>Постепенная нагрузка</h4><p>Наращиваю объем и интенсивность так, чтобы тело успевало адаптироваться, а не догоняло вас травмой.</p></div>
+      <div class="appr rv"><div class="n">05</div><h4>Забота о здоровье</h4><p>Травма — это провал плана, а не «издержки прогресса». Говорю «стоп», если вижу риск, даже когда вы рветесь вперед.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Практика -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head numbered rv">
+      <div class="eyebrow">Практика</div>
+      <h2>С кем я работаю</h2>
+      <p>От людей, которые впервые вышли на пробежку, до профессиональных спортсменов — подход один, нагрузка разная.</p>
+    </div>
+
+    <div class="exp-grid">
+      <div class="exp rv">
+        <div class="role">Беговое сообщество</div>
+        <h3>Беговой клуб TRUNNER GANG</h3>
+        <p>Вела ОФП для бегового клуба: силовая база, мобильность и профилактика травм для людей, которые бегают регулярно и много.</p>
+      </div>
+      <div class="exp rv">
+        <div class="role">Профессиональный спорт</div>
+        <h3>Боец Николай Чибисов</h3>
+        <p>Специальная физическая подготовка действующего бойца — работа на силу, мощность и выносливость под требования вида спорта.</p>
+      </div>
+      <div class="exp rv">
+        <div class="role">Бренд</div>
+        <h3>Атлет Running Religion</h3>
+        <p>Представляю беговой бренд как действующая бегунья: тренируюсь и выхожу на старты сама, поэтому знаю бег изнутри.</p>
+      </div>
+      <div class="exp rv">
+        <div class="role">Персональная работа</div>
+        <h3>Звезды и медиа-персоны</h3>
+        <p>Персональные тренировки с публичными людьми — там, где нужен результат в сжатые сроки и полная конфиденциальность.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Как начать -->
+<section id="steps" class="bg-sand">
+  <div class="wrap">
+    <div class="section-head numbered rv">
+      <div class="eyebrow">Как начать</div>
+      <h2>Как проходит первый шаг</h2>
+      <p>Сначала разбираемся, что вам нужно, и только потом говорим о формате и стоимости.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step rv">
+        <h4>Вы оставляете заявку</h4>
+        <p>Форма на этой странице или сообщение в Telegram. Пара полей — цель и текущий уровень.</p>
+      </div>
+      <div class="step rv">
+        <h4>Мы разговариваем</h4>
+        <p>Бесплатная короткая консультация: цель, здоровье, история травм, сколько времени реально есть на тренировки.</p>
+      </div>
+      <div class="step rv">
+        <h4>Я предлагаю план</h4>
+        <p>Говорю, реалистична ли цель в ваш срок, и предлагаю формат: тренировки, сопровождение или план.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Вопросы -->
+<section id="faq" class="faq">
+  <div class="wrap">
+    <div class="section-head numbered rv">
+      <div class="eyebrow">Частые вопросы</div>
+      <h2>То, что обычно спрашивают до старта</h2>
+    </div>
+    <div class="faq-wrap rv">
+      <div class="faq-item">
+        <button class="faq-q">Я никогда не занималась спортом. Мне точно подойдет?</button>
+        <div class="faq-a"><p>Да — и это самый частый запрос. Мы начинаем не с нагрузки, а с базовых движений: как вы приседаете, дышите, переносите вес. Первые тренировки будут проще, чем вы ожидаете, и именно поэтому вы не сойдете с дистанции через две недели.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">У меня были травмы / болят колени. Это противопоказание?</button>
+        <div class="faq-a"><p>Чаще нет, но это влияет на план. Я прошла обучение по реабилитации и выходу в силовой тренинг, миофасциальным техникам и работе с мышечными цепями, поэтому строю нагрузку с учетом ограничений. Если ситуация требует врача — скажу прямо и попрошу сначала обследоваться.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Можно тренироваться во время беременности?</button>
+        <div class="faq-a"><p>Да, при отсутствии медицинских противопоказаний. Это отдельное направление моей работы: у меня есть профильное обучение по беременности и фитнесу, работе с беременными и тазовому дну. Нагрузка подбирается под срок и самочувствие, обязательно с учетом рекомендаций вашего врача.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Чем онлайн отличается от офлайна и что выбрать?</button>
+        <div class="faq-a"><p>Офлайн — я вижу вас вживую и поправляю технику сразу, это лучший старт для новичков. Онлайн — план, разбор ваших видео и регулярная связь; подходит тем, кто уже понимает базовые движения или живет не в Москве. Если сомневаетесь — обсудим на консультации и выберем то, что подходит вам сейчас.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Сколько это стоит?</button>
+        <div class="faq-a"><p>Стоимость зависит от формата и частоты занятий. Актуальные цены отправляю в ответ на заявку или в Telegram — вместе с рекомендацией по формату.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Как быстро будет результат?</button>
+        <div class="faq-a"><p>Первые изменения в самочувствии и качестве движения — обычно через 3–4 недели регулярной работы. Измеримый результат в беге (дистанция, темп) — от 8–12 недель. Более короткие сроки обычно требуют нагрузки, которая заметно повышает риск травмы.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Заявка -->
+<section id="start" class="final laced">
+  <div class="wrap final-grid">
+    <div class="rv">
+      <div class="eyebrow">Следующий шаг</div>
+      <h2>Разберемся, с чего начать именно вам</h2>
+      <p class="lead">Расскажите про свою цель и текущий уровень — я отвечу лично, задам пару уточняющих вопросов и предложу формат. Даже если в итоге мы не начнем работать, у вас останется понимание, что делать дальше.</p>
+      <div class="promises">
+        <div>Отвечаю лично в течение 24 часов</div>
+        <div>Первая консультация бесплатная</div>
+        <div>Скажу, если цель нереалистична в ваш срок</div>
+      </div>
+      <div class="final-social">
+        <a class="btn btn-ghost-light" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn btn-ghost-light" href="https://instagram.com/katrin_swan" target="_blank" rel="noopener">Instagram @katrin_swan</a>
+      </div>
+    </div>
+
+    <div class="form-card rv">
+      <h3>Оставить заявку</h3>
+      <p class="hint">Заполнение займет меньше минуты — дальше я пишу вам лично.</p>
+      <form id="leadForm" novalidate>
+        <div class="field">
+          <label for="f-name">Имя</label>
+          <input type="text" id="f-name" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-contact">Telegram или WhatsApp</label>
+          <input type="text" id="f-contact" name="contact" placeholder="@username или +7 900 000-00-00" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-level">Уровень подготовки</label>
+            <select id="f-level" name="level" required>
+              <option value="">Выберите</option>
+              <option>Новичок, спорта не было</option>
+              <option>Есть базовая форма</option>
+              <option>Тренируюсь регулярно</option>
+              <option>Готовлюсь к старту</option>
+              <option>Возвращаюсь после перерыва / травмы</option>
+              <option>Беременность или после родов</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-goal">Цель</label>
+            <select id="f-goal" name="goal" required>
+              <option value="">Выберите</option>
+              <option>Начать бегать</option>
+              <option>Пробежать первую дистанцию</option>
+              <option>Улучшить результат в беге</option>
+              <option>Сила и общая форма (ОФП/СФП)</option>
+              <option>Восстановиться после травмы</option>
+              <option>Беременность / после родов</option>
+              <option>Воркшоп или обучение</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-format">Удобный формат</label>
+          <select id="f-format" name="format" required>
+            <option value="">Выберите</option>
+            <option>Офлайн в Москве</option>
+            <option>Онлайн-сопровождение</option>
+            <option>Только тренировочный план</option>
+            <option>Пока не знаю — нужна консультация</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-comment">Что важно знать (необязательно)</label>
+          <textarea id="f-comment" name="comment" placeholder="Травмы, ограничения по здоровью, дата забега, если готовитесь к старту, сколько дней в неделю есть на тренировки"></textarea>
+        </div>
+        <div class="consent">
+          <input type="checkbox" id="f-consent" name="consent" required>
+          <label for="f-consent">Даю согласие на обработку персональных данных для связи со мной. <a href="privacy.html" target="_blank" rel="noopener">Политика конфиденциальности</a></label>
+        </div>
+        <button class="btn btn-primary" type="submit" id="leadSubmit">Отправить заявку</button>
+        <p class="toast" id="leadToast" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Подвал -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">Катерина Лебедева<small>ОФП · СФП · Бег</small></div>
+        <p>Тренер по общей и специальной физической подготовке, функциональному тренингу и бегу. Москва и онлайн, персонально 1:1.</p>
+      </div>
+      <div class="foot-social">
+        <a href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Telegram →</a>
+        <a href="https://instagram.com/katrin_swan" target="_blank" rel="noopener">Instagram →</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Катерина Лебедева</span>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="sentModal" role="dialog" aria-modal="true" aria-labelledby="sentTitle">
+  <div class="modal-veil" data-close></div>
+  <div class="modal-card">
+    <button class="modal-close" id="sentClose" type="button" aria-label="Закрыть">×</button>
+    <div class="modal-mark" aria-hidden="true">✓</div>
+    <h3 id="sentTitle">Заявка отправлена</h3>
+    <p>Спасибо, <b id="sentName">я получила вашу заявку</b>. Отвечу лично в течение 24 часов — задам пару уточняющих вопросов и предложу формат.<br><br>Если хочется начать разговор раньше, напишите мне в Telegram.</p>
+    <div class="modal-actions">
+      <a class="btn btn-primary" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Написать в Telegram</a>
+      <button class="btn btn-outline" type="button" data-close>Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<!-- мобильная липкая панель -->
+<div class="sticky-cta">
+  <a class="btn btn-ghost-light" href="https://t.me/katrin_swan_lebedeva" target="_blank" rel="noopener">Telegram</a>
+  <a class="btn btn-primary" href="#start">Записаться на консультацию</a>
+</div>
+
+<script>
+// Адрес приема заявок
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwDSk3GHOPyTmQOfPi5KCXVrjKF2jW_Urm-eg1Hjyny2gNFFcXZ696fQE4s7ETTGHMS/exec';
+
+/* ---------- мобильное меню ---------- */
+(function(){
+  const burger = document.getElementById('burger');
+  const menu   = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  }));
+})();
+
+/* ---------- «показать все обучения» ---------- */
+(function(){
+  const btn  = document.getElementById('credsToggle');
+  const list = document.getElementById('credsMore');
+  btn.addEventListener('click', () => {
+    const open = list.classList.toggle('show');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    btn.textContent = open ? 'Свернуть' : 'Показать все обучения';
+  });
+})();
+
+/* ---------- FAQ-аккордеон ---------- */
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+/* ---------- reveal при скролле ---------- */
+(function(){
+  const els = document.querySelectorAll('.rv');
+  const showAll = () => els.forEach(e => e.classList.add('in'));
+
+  if (!('IntersectionObserver' in window)) { showAll(); return; }
+
+  let fired = false;
+  const io = new IntersectionObserver((entries) => {
+    fired = true;
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach(e => io.observe(e));
+  setTimeout(() => { if (!fired) { io.disconnect(); showAll(); } }, 1200);
+})();
+
+/* ---------- год в футере ---------- */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- отправка заявки ---------- */
+(function(){
+  const form  = document.getElementById('leadForm');
+  const btn   = document.getElementById('leadSubmit');
+  const toast = document.getElementById('leadToast');
+  const modal = document.getElementById('sentModal');
+  const modalClose = document.getElementById('sentClose');
+  const sentName = document.getElementById('sentName');
+
+  const say = (msg, kind) => { toast.textContent = msg; toast.className = 'toast ' + (kind || ''); };
+
+  /* --- окно «заявка отправлена» --- */
+  let lastFocus = null;
+
+  function openModal(name){
+    sentName.textContent = name ? (name + ', я получила вашу заявку') : 'я получила вашу заявку';
+    lastFocus = document.activeElement;
+    modal.classList.add('open');
+    document.body.classList.add('modal-lock');
+    modalClose.focus();
+  }
+
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.classList.remove('modal-lock');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeModal));
+  modalClose.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const payload = {
+      name:    (data.get('name')    || '').trim(),
+      contact: (data.get('contact') || '').trim(),
+      level:    data.get('level')   || '',
+      goal:     data.get('goal')    || '',
+      format:   data.get('format')  || '',
+      comment: (data.get('comment') || '').trim(),
+      page:     location.href,
+      source:   document.referrer || 'direct'
+    };
+
+    if (!payload.name)                     return say('Напишите, как к вам обращаться', 'err');
+    if (payload.contact.length < 3)        return say('Оставьте Telegram или телефон — иначе я не смогу ответить', 'err');
+    if (!payload.level || !payload.goal || !payload.format) return say('Выберите уровень, цель и формат', 'err');
+    if (!form.consent.checked)             return say('Нужно согласие на обработку данных', 'err');
+
+    if (SCRIPT_URL.indexOf('script.google.com') === -1) {
+      return say('Форма еще не подключена. Напишите, пожалуйста, в Telegram', 'err');
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Отправляем...';
+    say('');
+
+    const name = payload.name;
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+      form.reset();
+      btn.textContent = 'Заявка отправлена';
+      say('');
+      openModal(name);
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = 'Отправить заявку';
+      say('Не получилось отправить. Проверьте интернет или напишите мне в Telegram.', 'err');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
